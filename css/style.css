@@ -1,0 +1,133 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+
+ :root {
+   --primary: #4CAF50;
+   --secondary: #f4f4f4;
+   --text: #333;
+ }
+
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   color: var(--text);
+   background-color: var(--secondary);
+
+   header {
+     background-color: var(--primary);
+     color: white;
+     padding: 1.5rem;
+     text-align: center;
+   }
+
+   nav {
+     background: #333;
+     display: flex;
+     justify-content: center;
+     padding: 1rem;
+
+     a {
+       color: white;
+       text-decoration: none;
+       margin: 0 1rem;
+     }
+
+     a:hover {
+       text-decoration: underline;
+     }
+   }
+
+   section {
+     background: url('https://realestatemarket.com.mx/images/2023/02-febrero/06-02/Estrategias-ecommerce-para-los-pequenos-y-medianos-negocios.jpg') no-repeat center / cover;
+     height: 30vh;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     padding-top: 3rem;
+     text-align: center;
+     color: white;
+     text-shadow: 1px 1px 5px black;
+
+     h2 {
+       font-size: 2.5rem;
+       background: rgba(0, 0, 0, 0.4);
+       padding: 20px;
+     }
+   }
+
+   
+   main {
+     padding: 2.5rem 1.5rem;
+     max-width: 1200px;
+     margin: auto;
+
+     .product-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+       gap: 1.5rem;
+
+       .product-card {
+         background: white;
+         padding: 1rem;
+         border-radius: 8px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+
+         img {
+           width: 100%;
+           border-radius: 0.5rem;
+         }
+
+         .product-info {
+           margin-top: 1rem;
+         }
+
+         .product-title {
+           font-size: 1.1rem;
+           margin: 0 0 5px;
+         }
+
+         .price {
+           color: var(--primary);
+           font-weight: bold;
+         }
+
+         .buy-button {
+           margin-top: 0.75rem;
+           padding: 0.75rem;
+           background: var(--primary);
+           color: white;
+           border: none;
+           cursor: pointer;
+           border-radius: 0.5rem;
+           transition: background 0.3s ease;
+         }
+
+         .buy-button:hover {
+           background: #388e3c;
+         }
+       }
+     }
+   }
+
+   footer {
+     background: #222;
+     color: white;
+     text-align: center;
+     padding: 1.5rem;
+     margin-top: 2.5rem;
+   }
+ }
+
+ @media (max-width: 600px) {
+   body .hero h2 {
+     font-size: 1.5rem;
+     padding: 0.75rem;
+   }
+ }
