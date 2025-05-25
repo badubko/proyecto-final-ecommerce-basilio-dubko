@@ -1,5 +1,5 @@
-@Autor: Alumno tanto...
-@Fecha creación 20250519
+@Autor: Alumno Basilio Dubko
+@Fecha creación 20250524
 @Proyecto: Talento Tech
 
 
