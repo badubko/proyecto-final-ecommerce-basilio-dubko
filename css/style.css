@@ -1,133 +1,256 @@
+html {
+    font-size: 16px;
+    font-family: "Noto Serif Dives Akuru", serif;
+    background-color: #def5bc;
+}
 
-* {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
- }
+@media (min-width: 768px) and (max-width: 1279px) {
+    body {
+        font-size: 16px;
+    }
+}
 
- :root {
-   --primary: #4CAF50;
-   --secondary: #f4f4f4;
-   --text: #333;
- }
+.imglogo {
+    position: sticky;
+}
 
- body {
-   margin: 0;
-   font-family: Arial, sans-serif;
-   color: var(--text);
-   background-color: var(--secondary);
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: black;
+    gap: 1rem;
+}
 
-   header {
-     background-color: var(--primary);
-     color: white;
-     padding: 1.5rem;
-     text-align: center;
-   }
+li a {
+    justify-content: space-evenly;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-   nav {
-     background: #333;
-     display: flex;
-     justify-content: center;
-     padding: 1rem;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: #daf1b9;
+}
 
-     a {
-       color: white;
-       text-decoration: none;
-       margin: 0 1rem;
-     }
+nav {
+    height: auto;
+    justify-content: space-evenly;
+}
 
-     a:hover {
-       text-decoration: underline;
-     }
-   }
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 1rem;
+}
 
-   section {
-     background: url('https://realestatemarket.com.mx/images/2023/02-febrero/06-02/Estrategias-ecommerce-para-los-pequenos-y-medianos-negocios.jpg') no-repeat center / cover;
-     height: 30vh;
-     display: flex;
-     align-items: flex-start;
-     justify-content: center;
-     padding-top: 3rem;
-     text-align: center;
-     color: white;
-     text-shadow: 1px 1px 5px black;
+main {
+    background-color: #e1f5c4;
+    font-family: "Noto Serif Dives Akuru", serif;
+}
 
-     h2 {
-       font-size: 2.5rem;
-       background: rgba(0, 0, 0, 0.4);
-       padding: 20px;
-     }
-   }
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 
-   
-   main {
-     padding: 2.5rem 1.5rem;
-     max-width: 1200px;
-     margin: auto;
+.item {
+    flex: 1 1 200px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 
-     .product-grid {
-       display: grid;
-       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-       gap: 1.5rem;
+}
 
-       .product-card {
-         background: white;
-         padding: 1rem;
-         border-radius: 8px;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
+footer {
+    background-color: #def5bc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5px;
+}
 
-         img {
-           width: 100%;
-           border-radius: 0.5rem;
-         }
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
 
-         .product-info {
-           margin-top: 1rem;
-         }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    place-items: center;
+    padding: 20px;
+    background-color: #e8facc;
+}
 
-         .product-title {
-           font-size: 1.1rem;
-           margin: 0 0 5px;
-         }
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #e8facc;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10)
+}
 
-         .price {
-           color: var(--primary);
-           font-weight: bold;
-         }
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #e8facc;
+}
 
-         .buy-button {
-           margin-top: 0.75rem;
-           padding: 0.75rem;
-           background: var(--primary);
-           color: white;
-           border: none;
-           cursor: pointer;
-           border-radius: 0.5rem;
-           transition: background 0.3s ease;
-         }
+.h2 {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+}
 
-         .buy-button:hover {
-           background: #388e3c;
-         }
-       }
-     }
-   }
+.t1 {
+    margin: 10px;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10)
+}
 
-   footer {
-     background: #222;
-     color: white;
-     text-align: center;
-     padding: 1.5rem;
-     margin-top: 2.5rem;
-   }
- }
 
- @media (max-width: 600px) {
-   body .hero h2 {
-     font-size: 1.5rem;
-     padding: 0.75rem;
-   }
- }
+.t2 {
+    background-color: #e0f0d0; /* Slightly different tone */
+    margin: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    text-align: center; /* Center the text */
+    color: #3b4e2d;      /* Slightly darker greenish tone */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+.t3 {
+    background-color: #d6f3c2; /* Softer green tone */
+    margin: 10px;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #2f4f1f; /* Richer dark olive green */
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+}
+
+.t3 i {
+    margin-right: 8px;
+    color: #1f7a1f; /* A little brighter green for the icon */
+}
+
+
+.editorial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #e8facc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+    width: 50%;
+}
+
+
+.maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    background-color: #007BFF; /* Bootstrap blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Noto Serif Dives Akuru", serif;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.caption {
+    text-align: center;
+    font-size: 1rem;
+    color: #2f2f2f;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.whatsapp-contact {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #075e54;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.whatsapp-contact i {
+    color: #25d366;
+    margin-right: 8px;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: #075e54;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}

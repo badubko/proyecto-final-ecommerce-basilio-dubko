@@ -2,69 +2,112 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Tienda Online</title>
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" type="image/png">
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
+    <title> Ferreteria Industrial Tornillex</title>
 </head>
 
 <body>
+    <header>
 
-  <header>
-    <h1>Mi Tienda Online</h1>
-    <p>¡Gran cantidad de productos truchos al mejor precio!</p>
-  </header>
-
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Productos</a>
-    <a href="#">Contacto</a>
-    <a href="#">Carrito</a>
-  </nav>
-
-  <section class="hero">
-    <h2>¡Bienvenido a tu tienda favorita!</h2>
-  </section>
-
-  <main>
-    <h2>Productos destacados que no sirven</h2>
-    <div class="product-grid">
-      
-      <div class="product-card">
-        <img src="https://picsum.photos/300/200?random=8" alt="Producto 1">
-        <div class="product-info">
-          <p class="product-title">Producto 1</p>
-          <p class="price">$19.99</p>
-          <button class="buy-button">Comprar</button>
+        <div class="logo-text">
+                Tornillex S.A.
         </div>
-      </div>
+        <div class="nav">
+            <nav>
+                <ul>
 
-      <div class="product-card">
-        <img src="https://picsum.photos/300/200?random=9" alt="Producto 2">
-        <div class="product-info">
-          <p class="product-title">Producto 2</p>
-          <p class="price">$29.99</p>
-          <button class="buy-button">Comprar</button>
+                    <li><a href="./index.html"> Inicio</a></li>
+
+                    <li><a href="./productos.html"> Productos</a></li>
+                    
+                    <li><a href="./contacto.html"> Contacto </a></li>
+
+                    <li><a href="./ubicacion.html"> Ubicación</a></li>
+
+                </ul>
+            </nav>
         </div>
-      </div>
 
-      <div class="product-card">
-        <img src="https://picsum.photos/300/200?random=10" alt="Producto 3">
-        <div class="product-info">
-          <p class="product-title">Producto 3</p>
-          <p class="price">$14.99</p>
-          <button class="buy-button">Comprar</button>
+    </header>
+
+<!--
+    <main>
+        <div class="t3">
+            <p>
+              Somos una empresa que desde 1960 esta dedicada con pasión a proveer soluciones para las más diversas necesidades de nuestros clientes.
+            </p>
         </div>
-      </div>
+-->
 
-    </div>
-  </main>
+     <div class="t3">
+       <p><i class="fas fa-store"></i>Somos una empresa que desde 1960 esta dedicada con pasión a proveer soluciones para las más diversas necesidades de nuestros clientes.</p> 
+     </div>
+        
+        
+        <div class="textos">
+            <h2 class="h2">Amplia variedad de herramientas y componentes industriales</h2>
+            <p class="t1">
+               Herramientas manuales y electricas, accesorios, gran variedad de tornilleria. 
+               Nuestro staff de profesionales lo asesorara y le aconsejara para que pueda elegir la solución más conveniente
+               para sus proyectos.
+            </p>
 
-  <footer>
-    <p>&copy; 2025 Mi Tienda Truchinsky Online - Todos los derechos reservados para nadie</p>
-  </footer>
+            <h2 class="h2">Brindamos soluciones para una amplia variedad de proyectos</h2>
+            <p class="t1">
+                Productos y soluciones para industrias, profesionales y para trabajos domiciliarios. 
+            </p>
+        </div>
+            
 
+        
+        <div class="resenas">
+            <h2>Opiniones de algunos de Nuestros Clientes</h2>
+            <div class="grid">
+                <div class="review">
+                    <h3>Jose Martell</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>¡Excelente calidad! Consegui los martillos de plástico que buscaba a buen precio.</p>
+                </div>
+                <div class="review">
+                    <h3>John Mallet</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>Muy buena experiencia en general. Los vendedores son amables y saben mucho.</p>
+                </div>
+                <div class="review">
+                    <h3>Tomas Corriente</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>Gran variedad de instrumentos de medición.</p>
+                </div>
+                <div class="review">
+                    <h3>Juan Banfield</h3>
+                    <div class="stars">★★★☆☆</div>
+                    <p>Compre una agujereadora china y resultó de poca calidad: 
+                            se rompió al poco tiempo pero me la reemplazaron sin problemas!</p>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            Copyright © 2025, Tornillex S.A.
+        </p>
+        <div class="social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,5 @@
-@Autor: Alumno Basilio Dubko
-@Fecha creación 20250524
-@Proyecto: Talento Tech
+Comision 25016 Front-End JS
+Basilio Dubko
+Página web básica desarrollada como parte de un curso de Front-End 
 
-
-
-
-
-Tecnologías: HTML, CSS
+Se creo una estructura básica de una página web y prepararla para futuras mejoras con CSS y JavaScript.
