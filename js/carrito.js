@@ -1,5 +1,5 @@
 // JavaScript source code
-<script>
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     function saveCart() {
@@ -56,4 +56,3 @@
     });
 
     document.addEventListener("DOMContentLoaded", renderCart);
-</script>
