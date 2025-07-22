@@ -273,6 +273,28 @@ form {
     right: -10px;
 }
 
+/* === Cart Icon === */
+.nav li:last-child {
+    margin-left: auto;
+    position: relative;
+}
+
+#cart-count {
+    background: crimson;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    line-height: 1;
+    min-width: 18px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+}
+
 /* === Cart Table Styling === */
 .cart-table {
     width: 100%;
