@@ -295,6 +295,28 @@ form {
     z-index: 2;
 }
 
+/* === Cart Icon === */
+.nav li:last-child {
+    margin-left: auto;
+    position: relative;
+}
+
+#cart-count {
+    background: crimson;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    right: -18px;
+    line-height: 1;
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+}
+
 /* === Cart Table Styling === */
 .cart-table {
     width: 100%;
@@ -346,3 +368,4 @@ form {
     .remove-btn:hover {
         background-color: #c0392b;
     }
+
