@@ -1,0 +1,100 @@
+﻿<!-- FILE: carrito.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-text">Tornillex S.A.</div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Tu Carrito</h1>
+        <table style="width:100%; text-align:left; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-table"></tbody>
+        </table>
+        <p><strong>Total general:</strong> $<span id="total-general">0</span></p>
+    </main>
+
+    <script>let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      const table = document.getElementById("cart-table");
+      const totalElement = document.getElementById("total-general");
+      table.innerHTML = "";
+
+      let totalGeneral = 0;
+
+      cart.forEach((item, index) => {
+        const row = document.createElement("tr");
+        const subtotal = item.price * item.quantity;
+        totalGeneral += subtotal;
+
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>$${item.price.toLocaleString()}</td>
+          <td>
+            <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="qty-input">
+          </td>
+          <td>$${subtotal.toLocaleString()}</td>
+          <td><button class="remove-btn" data-index="${index}">Eliminar</button></td>
+        `;
+
+        table.appendChild(row);
+      });
+
+      totalElement.textContent = totalGeneral.toLocaleString();
+    }
+
+    document.addEventListener("change", function(e) {
+      if (e.target.classList.contains("qty-input")) {
+        const index = e.target.dataset.index;
+        const newQty = parseInt(e.target.value);
+        if (newQty >= 1) {
+          cart[index].quantity = newQty;
+          saveCart();
+          renderCart();
+        }
+      }
+    });
+
+    document.addEventListener("click", function(e) {
+      if (e.target.classList.contains("remove-btn")) {
+        const index = e.target.dataset.index;
+        cart.splice(index, 1);
+        saveCart();
+        renderCart();
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", renderCart);</script>
+</body>
+</html>

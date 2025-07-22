@@ -1,4 +1,4 @@
-﻿<!-- FILE: productos.html -->
+﻿<!-- INTEGRATED PRODUCTOS.HTML WITH CART FUNCTIONALITY AND API FETCH -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,6 +11,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
     <title>Productos - Tornillex S.A.</title>
+    <style>
+        #cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 300px;
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+
+            #cart h2 {
+                margin-top: 0;
+            }
+    </style>
 </head>
 
 <body>
@@ -23,7 +41,6 @@
                     <li><a href="./productos.html">Productos</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                     <li><a href="./ubicacion.html">Ubicación</a></li>
-                    <li><a href="./carrito.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -36,6 +53,12 @@
         </div>
 
         <div id="product-container" class="contenedor"></div>
+
+        <div id="cart">
+            <h2>Carrito</h2>
+            <ul id="cart-items"></ul>
+            <p><strong>Total:</strong> $<span id="cart-total">0</span></p>
+        </div>
     </main>
 
     <footer>
@@ -47,16 +70,27 @@
         </div>
     </footer>
 
-    <script>const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     function saveCart() {
       localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount();
     }
 
-    function updateCartCount() {
-      const count = cart.reduce((acc, item) => acc + item.quantity, 0);
-      document.getElementById("cart-count").textContent = count;
+    function updateCartDisplay() {
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      cartItems.innerHTML = "";
+      let total = 0;
+
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+        cartItems.appendChild(li);
+        total += item.price * item.quantity;
+      });
+
+      cartTotal.textContent = total.toLocaleString();
     }
 
     function addToCart(name, price) {
@@ -67,6 +101,7 @@
         cart.push({ name, price, quantity: 1 });
       }
       saveCart();
+      updateCartDisplay();
     }
 
     function renderProducts(products) {
@@ -89,16 +124,36 @@
       });
     }
 
+    // Simulamos una API con productos locales por ahora
     const apiProducts = [
-      { name: "Calibre Digital Mitutoyo", price: 450000, image: "./images/calibre_mitutoyo.jpg" },
-      { name: "Agujeradora 13mm Makita", price: 970000, image: "./images/agujeradora-13mm-makita-1.jpg" },
-      { name: "Juego Mechas EZETA con Organizador", price: 360000, image: "./images/Juego_mechas_Ezeta_con_organizador.jpg" },
-      { name: "Juego de destornilladores Stanley", price: 340000, image: "./images/destornilladores-aislados_Stanley.png" }
+      {
+        name: "Calibre Digital Mitutoyo",
+        price: 450000,
+        image: "./images/calibre_mitutoyo.jpg"
+      },
+      {
+        name: "Agujeradora 13mm Makita",
+        price: 970000,
+        image: "./images/agujeradora-13mm-makita-1.jpg"
+      },
+      {
+        name: "Juego Mechas EZETA con Organizador",
+        price: 360000,
+        image: "./images/Juego_mechas_Ezeta_con_organizador.jpg"
+      },
+      {
+        name: "Juego de destornilladores Stanley",
+        price: 340000,
+        image: "./images/destornilladores-aislados_Stanley.png"
+      }
     ];
 
+    // Simulamos un fetch desde una API REST
     document.addEventListener("DOMContentLoaded", () => {
       renderProducts(apiProducts);
-      updateCartCount();
-    });</script>
+      updateCartDisplay();
+    });
+    </script>
 </body>
+
 </html>
