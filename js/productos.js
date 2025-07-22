@@ -43,10 +43,10 @@
     }
 
         const apiProducts = [
-        {name: "Calibre Digital Mitutoyo", price: 450000, image: "./images/calibre_mitutoyo.jpg" },
-        {name: "Agujeradora 13mm Makita", price: 970000, image: "./images/agujeradora-13mm-makita-1.jpg" },
-        {name: "Juego Mechas EZETA con Organizador", price: 360000, image: "./images/Juego_mechas_Ezeta_con_organizador.jpg" },
-        {name: "Juego de destornilladores Stanley", price: 340000, image: "./images/destornilladores-aislados_Stanley.png" }
+        {name: "Calibre Digital Mitutoyo", price: 450000, image: "../images/calibre_mitutoyo.jpg" },
+        {name: "Agujeradora 13mm Makita", price: 970000, image: "../images/agujeradora-13mm-makita-1.jpg" },
+        {name: "Juego Mechas EZETA con Organizador", price: 360000, image: "../images/Juego_mechas_Ezeta_con_organizador.jpg" },
+        {name: "Juego de destornilladores Stanley", price: 340000, image: "../images/destornilladores-aislados_Stanley.png" }
         ];
 
     document.addEventListener("DOMContentLoaded", () => {
